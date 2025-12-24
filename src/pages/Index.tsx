@@ -10,6 +10,7 @@ import roleAuthor from "@/assets/role-author.jpg";
 import roleHumanitarian from "@/assets/role-humanitarian.jpg";
 import roleLeader from "@/assets/role-leader.jpg";
 import roleCreator from "@/assets/role-creator.jpg";
+import missionImage from "@/assets/mission-image.jpg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
@@ -26,22 +27,22 @@ const lifeRoles = [
 
 const missionPoints = [
   {
-    title: "Find Purpose",
+    title: "For a Purpose",
     description:
-      "Awakening purpose in others — inspiring people to rise above fear and live a life aligned with who they're truly meant to be.",
+      "Awakening purpose in others — inspiring people to rise above fear and live lives aligned with who they're truly meant to be.",
   },
   {
-    title: "Live a Dream",
+    title: "For a People",
     description:
-      "Empowering women and youth through storytelling, mentoring, and authentic connection to transform their world and potential.",
+      "Empowering women and youth through storytelling, mentorship, and authentic connection reminding them of their worth and potential.",
   },
   {
-    title: "The Discover, Heal, Embrace You",
+    title: "The Passion That Drives Me",
     description:
-      "Modeling positivity, courage, and faith to build spaces, platforms, and messages that spark transformation and lasting impact.",
+      "Merging creativity, courage, and faith to build projects, platforms, and messages that spark transformation and lasting impact.",
   },
   {
-    title: "The Legacy I want to leave is worth",
+    title: "The Legacy I want to leave on earth",
     description:
       "Creating meaningful work that transcends time, a legacy of purpose, empowerment, and hope for generations to come.",
   },
@@ -100,30 +101,52 @@ const Index = () => {
       {/* Mission Section */}
       <section className="bg-primary text-primary-foreground section-padding">
         <div className="container mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12">
-            I'm on a Mission
-          </h2>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Content */}
+            <div>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold mb-10 italic">
+                I'm on a Mission
+              </h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {missionPoints.map((point, index) => (
-              <div
-                key={index}
-                className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 hover-lift"
-              >
-                <div className="inline-block bg-secondary text-secondary-foreground px-3 py-1 rounded text-sm font-medium mb-3">
-                  {point.title}
-                </div>
-                <p className="text-sm leading-relaxed opacity-90">
-                  {point.description}
-                </p>
+              <div className="space-y-6">
+                {missionPoints.map((point, index) => (
+                  <div key={index}>
+                    <span 
+                      className="inline-block px-3 py-1 text-sm md:text-base font-semibold mb-2"
+                      style={{
+                        background: 'linear-gradient(90deg, hsl(45, 90%, 55%) 0%, hsl(45, 85%, 60%) 100%)',
+                        color: 'hsl(var(--primary))',
+                        transform: 'skewX(-3deg)',
+                      }}
+                    >
+                      {point.title}
+                    </span>
+                    <p className="text-sm md:text-base leading-relaxed opacity-90 pl-1">
+                      {point.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Right Image */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src={missionImage}
+                alt="Dionne Tweneboah"
+                className="w-full max-w-md object-cover rounded-sm"
+              />
+            </div>
           </div>
 
-          <blockquote className="mt-12 text-center max-w-3xl mx-auto">
-            <p className="font-heading text-xl md:text-2xl italic leading-relaxed">
-              "True success isn't about recognition or wealth, it's about the lives you touch and the change you inspire while you're here... and long after you're gone."
-            </p>
+          <blockquote className="mt-16 text-center max-w-3xl mx-auto">
+            <div className="flex items-start justify-center gap-2">
+              <span className="text-gold text-4xl md:text-5xl font-heading leading-none">"</span>
+              <p className="font-heading text-lg md:text-xl italic leading-relaxed text-cream/90">
+                True success isn't about recognition or wealth; it's about the lives you touch and the change you inspire while you're here, and long after you're gone
+              </p>
+              <span className="text-gold text-4xl md:text-5xl font-heading leading-none self-end">"</span>
+            </div>
           </blockquote>
         </div>
       </section>
@@ -229,9 +252,7 @@ const Index = () => {
               <img
                 src={role.image}
                 alt={role.title}
-                className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${
-                  index !== 3 ? "grayscale group-hover:grayscale-0" : ""
-                }`}
+                className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
               />
             </div>
           ))}
