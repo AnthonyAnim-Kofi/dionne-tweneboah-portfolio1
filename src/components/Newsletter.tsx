@@ -5,7 +5,7 @@ const Newsletter = () => {
   return <section className="bg-background">
       {/* Top - Image Section */}
       <div className="relative h-[400px] md:h-[500px]">
-        <img alt="Dionne Tweneboah" src="/lovable-uploads/1041418e-bd43-48c8-b96c-a08b0bcdb5fb.jpg" className="absolute inset-0 w-full h-full object-cover object-top opacity-85 border-muted" />
+        <img alt="Dionne Tweneboah" src="/lovable-uploads/1041418e-bd43-48c8-b96c-a08b0bcdb5fb.jpg" className="absolute inset-0 w-full h-full object-cover object-top opacity-85 border-muted color-#40404000" />
         {/* Name overlay */}
         <div className="absolute top-8 left-8 md:top-12 md:left-12">
           <p className="font-heading text-xl md:text-2xl text-white">
