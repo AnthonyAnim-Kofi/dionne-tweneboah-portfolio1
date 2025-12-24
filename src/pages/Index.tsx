@@ -125,7 +125,7 @@ const Index = () => {
       <div className="h-16 md:h-24 bg-background my-0 mx-0 px-0 py-0"></div>
 
       {/* Mission Section */}
-      <section className="bg-primary text-primary-foreground section-padding">
+      <section className="text-primary-foreground section-padding bg-[#992430]">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Content */}
