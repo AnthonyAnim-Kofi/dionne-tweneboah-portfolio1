@@ -36,7 +36,7 @@ const About = () => {
           </div>
 
           <div className="max-w-2xl mx-auto space-y-4">
-            <h2 className="font-heading text-2xl md:text-3xl font-semibold text-burgundy">
+            <h2 className="font-heading text-2xl md:text-3xl font-semibold text-burgundy my-[50px]">
               Bestselling author,<br />
               transformational speaker,<br />
               and mindset coach,
