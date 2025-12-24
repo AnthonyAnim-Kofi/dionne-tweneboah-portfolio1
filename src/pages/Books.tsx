@@ -169,7 +169,7 @@ const Books = () => {
             <p className="font-signature text-2xl md:text-3xl italic text-muted-foreground" style={{
             fontFamily: 'Brittany Signature'
           }}>
-              If You're Wondering...
+              (If You're Wondering...)
             </p>
           </div>
 
